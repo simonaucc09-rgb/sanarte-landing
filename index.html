@@ -133,24 +133,82 @@
             </p>
 
             <!-- VSL Compacto Placeholder -->
-            <div class="relative w-full max-w-3xl mx-auto mb-8 group perspective-1000 px-0 md:px-4 cursor-pointer" onclick="document.getElementById('oferta').scrollIntoView({behavior: 'smooth'})">
-                <div class="relative aspect-video bg-black rounded-xl border border-teal-500/30 shadow-[0_0_25px_rgba(20,184,166,0.2)] overflow-hidden">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-black">
-                        <div class="w-16 h-16 md:w-20 md:h-20 bg-teal-600 rounded-full flex items-center justify-center pl-1 shadow-[0_0_20px_rgba(20,184,166,0.6)] animate-pulse-slow">
-                            <i data-lucide="play" class="w-6 h-6 md:w-8 md:h-8 text-white fill-white"></i>
-                        </div>
-                        <!-- CAMBIO COPY VSL: GATILLO DE MISTERIO -->
-                        <p class="mt-3 text-xs md:text-sm font-bold text-gray-200 uppercase tracking-widest px-4">ADVERTENCIA: Mira esto antes de volver a desbloquearlo o llamarlo.</p>
-                        <p class="text-[10px] md:text-xs text-gray-500 mt-1">(La razón biológica por la que no puedes parar).</p>
-                    </div>
-                </div>
-                <!-- Barra progreso simulada -->
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-gray-800 overflow-hidden rounded-b-xl mx-0 md:mx-4">
-                   <div class="h-full bg-teal-500 w-1/3"></div>
-                </div>
-            </div>
+           <div class="relative w-full max-w-3xl mx-auto mb-8 group overflow-hidden rounded-xl border border-purple-500/30 shadow-[0_0_30px_rgba(147,51,234,0.3)] bg-black">
+    
+    <video 
+        id="miVideoVSL" 
+        src="https://www.dropbox.com/scl/fi/8cf5dhkit6cdgdw5a61xs/Dise-o-sin-t-tulo-4.mp4?rlkey=st72jy6tibx3n4qnrbdz40di3&st=y8fpze06&raw=1" 
+        class="w-full h-full object-cover aspect-video cursor-pointer" 
+        playsinline 
+        webkit-playsinline 
+        muted 
+        autoplay 
+        loop
+        oncontextmenu="return false;">
+        Tu navegador no soporta videos HTML5.
+    </video>
 
-            <div class="px-2">
+    <div id="capaUnmute" class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/60 backdrop-blur-[2px] cursor-pointer transition-opacity duration-500">
+        <div class="w-20 h-20 bg-purple-600/90 rounded-full flex items-center justify-center pl-1 shadow-[0_0_30px_rgba(147,51,234,0.8)] animate-pulse-slow hover:scale-110 transition-transform">
+            <i data-lucide="volume-2" class="w-8 h-8 text-white"></i>
+        </div>
+        <p class="mt-4 text-white font-bold tracking-widest text-sm uppercase text-shadow">Haz Clic para Escuchar</p>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full h-1 bg-gray-900/80 z-10 pointer-events-none">
+        <div id="barraProgreso" class="h-full bg-purple-600 w-0 shadow-[0_0_10px_#9333ea]"></div>
+    </div>
+
+</div>
+
+<script>
+    const video = document.getElementById('miVideoVSL');
+    const capa = document.getElementById('capaUnmute');
+    const barra = document.getElementById('barraProgreso');
+    let videoStarted = false;
+
+    capa.addEventListener('click', () => {
+        videoStarted = true;
+        video.currentTime = 0; 
+        video.muted = false;
+        video.loop = false;
+        video.play();
+        
+        capa.style.opacity = '0';
+        setTimeout(() => { capa.style.display = 'none'; }, 500);
+
+        // Animación de 140 segundos (2:20)
+        barra.style.animation = 'smart-progress-purple 140s linear forwards';
+    });
+
+    video.addEventListener('click', () => {
+        if (videoStarted) {
+            if (video.paused) {
+                video.play();
+                barra.style.animationPlayState = 'running';
+            } else {
+                video.pause();
+                barra.style.animationPlayState = 'paused';
+            }
+        }
+    });
+
+    video.addEventListener('ended', () => {
+        barra.style.animation = 'none';
+        barra.style.width = '100%';
+    });
+</script>
+
+<style>
+    @keyframes smart-progress-purple {
+        0%   { width: 0%; }
+        5%   { width: 25%; } /* Rápido al inicio */
+        15%  { width: 45%; } 
+        40%  { width: 70%; } 
+        75%  { width: 90%; } 
+        100% { width: 100%; }
+    }
+</style>
                 <!-- Botón CTA Principal (Verde Esmeralda) -->
                 <a href="#oferta" class="w-full max-w-md mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-black text-lg py-4 rounded-full shadow-[0_0_25px_rgba(16,185,129,0.4)] transform active:scale-95 transition-all flex items-center justify-center gap-2 animate-pulse-slow">
                     <span>SÍ, QUIERO RECUPERAR MI VIDA</span>
@@ -708,5 +766,6 @@
     </script>
 </body>
 </html>
+
 
 
