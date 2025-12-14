@@ -18,7 +18,7 @@
         .font-heading { font-family: 'Instrument Serif', serif; }
         .font-sans { font-family: 'Poppins', sans-serif; }
 
-        /* Mejorar renderizado de texto en móviles */
+        /* Renderizado nítido en móviles */
         body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
         /* Animaciones */
@@ -38,12 +38,10 @@
         .animate-scroll { animation: scroll 40s linear infinite; }
         .animate-scroll-slow { animation: scroll 60s linear infinite; }
         
-        /* Pausar animación al tocar en móvil */
         .animate-scroll:active, .animate-scroll-slow:active {
             animation-play-state: paused;
         }
 
-        /* Ocultar barra de scroll */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -68,7 +66,7 @@
         .faq-content.open { max-height: 300px; }
         .rotate-180 { transform: rotate(180deg); }
 
-        /* VSL Barra Magia */
+        /* Animación Barra Morada VSL (2:20 min) */
         @keyframes smart-progress-purple {
             0%   { width: 0%; }
             5%   { width: 25%; } 
@@ -86,15 +84,15 @@
             <div class="font-heading font-bold text-2xl italic tracking-wider text-white">
                 Sanar<span class="text-teal-400">te</span>
             </div>
-            <a href="#oferta" class="bg-white/10 border border-white/20 text-white text-[11px] font-bold px-3 py-1.5 rounded-full hover:bg-white/20 transition-all">
+            <a href="#oferta" class="bg-white/10 border border-white/20 text-white text-[11px] font-bold px-4 py-1.5 rounded-full hover:bg-white/20 transition-all">
                 EMPEZAR YA
             </a>
         </div>
     </nav>
 
     <div class="pt-20 pb-3 px-2 text-center bg-gradient-to-r from-purple-900/40 to-pink-900/40 border-b border-white/5">
-        <span class="inline-block bg-red-500/20 border border-red-500/50 text-red-200 px-2 py-0.5 rounded-full text-[10px] font-bold tracking-widest mb-1 animate-pulse">
-            ⚠️ ALTA VINCULACIÓN TRAUMÁTICA DETECTADA
+        <span class="inline-block bg-red-500/20 border border-red-500/50 text-red-200 px-3 py-0.5 rounded-full text-[10px] font-bold tracking-widest mb-1 animate-pulse">
+            ⚠️ ALTA VINCULACIÓN DETECTADA
         </span>
         <p class="text-gray-300 text-[11px] leading-tight px-4">
             Tu perfil indica que necesitas proteger tu energía mental <strong>hoy mismo</strong>.
@@ -102,7 +100,7 @@
     </div>
 
     <section class="relative pt-6 pb-10 px-4 text-center">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-[200px] bg-teal-600/20 rounded-full blur-[60px] -z-10 pointer-events-none"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[250px] h-[250px] bg-teal-600/15 rounded-full blur-[60px] -z-10 pointer-events-none"></div>
 
         <div class="max-w-4xl mx-auto z-10 relative">
             <h1 class="font-normal italic font-heading mb-4 leading-none">
@@ -161,6 +159,7 @@
     </section>
 
     <section id="agitation" class="py-10 bg-[#150a25] border-y border-purple-900/30 relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <div class="max-w-5xl mx-auto px-4 relative z-10">
             <h2 class="text-2xl md:text-4xl font-normal italic text-center mb-8 font-heading leading-tight">
                 🤔 ¿Te sientes secuestrada por estos síntomas?
@@ -187,6 +186,16 @@
                     </div>
                 </div>
                 
+                <div class="bg-[#1e1035] p-4 rounded-xl border border-purple-800/50 flex gap-3 shadow-md items-start">
+                    <div class="w-8 h-8 bg-red-900/30 rounded-lg flex items-center justify-center border border-red-500/20 flex-shrink-0 mt-1">
+                        <i data-lucide="eye-off" class="w-4 h-4 text-red-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-sm mb-1">Niebla Mental</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">No puedes concentrarte en tus hijos o trabajo porque él ocupa el 90% de tu mente.</p>
+                    </div>
+                </div>
+
                 <div class="bg-[#1e1035] p-4 rounded-xl border border-purple-800/50 flex gap-3 shadow-md items-start">
                     <div class="w-8 h-8 bg-red-900/30 rounded-lg flex items-center justify-center border border-red-500/20 flex-shrink-0 mt-1">
                         <i data-lucide="alert-triangle" class="w-4 h-4 text-red-400"></i>
@@ -225,47 +234,74 @@
                 <span class="mr-2 not-italic">🎁</span>BONOS DE ACCIÓN RÁPIDA
             </h2>
             
-            <div class="grid grid-cols-1 gap-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                
                 <div class="bg-[#150a25] rounded-xl p-3 border border-purple-900/50 flex items-center gap-3 shadow-lg">
-                    <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-pink-400">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-pink-400 border border-white/5">
+                        <i data-lucide="message-circle" class="w-6 h-6"></i>
                     </div>
                     <div>
                         <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">BONO #1</div>
-                        <h3 class="text-sm font-bold text-white leading-tight">Scripts 'Piedra Gris'</h3>
-                        <p class="text-[10px] text-gray-400">Respuestas exactas para neutralizarlo.</p>
+                        <h3 class="text-sm font-bold text-white leading-tight mb-0.5">Scripts 'Piedra Gris'</h3>
+                        <p class="text-[10px] text-gray-400 leading-tight">Respuestas exactas para neutralizarlo.</p>
                     </div>
                 </div>
+
                 <div class="bg-[#150a25] rounded-xl p-3 border border-purple-900/50 flex items-center gap-3 shadow-lg">
-                    <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-purple-400">
-                        <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+                    <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-purple-400 border border-white/5">
+                        <i data-lucide="brain-circuit" class="w-6 h-6"></i>
                     </div>
                     <div>
                         <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">BONO #2</div>
-                        <h3 class="text-sm font-bold text-white leading-tight">Detox de Dopamina</h3>
-                        <p class="text-[10px] text-gray-400">Para que tu cerebro deje de pedirlo.</p>
+                        <h3 class="text-sm font-bold text-white leading-tight mb-0.5">Detox de Dopamina</h3>
+                        <p class="text-[10px] text-gray-400 leading-tight">Para que tu cerebro deje de pedirlo.</p>
                     </div>
                 </div>
+
                 <div class="bg-[#150a25] rounded-xl p-3 border border-purple-900/50 flex items-center gap-3 shadow-lg">
-                    <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-red-400">
-                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-red-400 border border-white/5">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
                     </div>
                     <div>
                         <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">BONO #3</div>
-                        <h3 class="text-sm font-bold text-white leading-tight">Kit Anestesia Emocional</h3>
-                        <p class="text-[10px] text-gray-400">Audio SOS para la ansiedad en 3 min.</p>
+                        <h3 class="text-sm font-bold text-white leading-tight mb-0.5">Kit Anestesia Emocional</h3>
+                        <p class="text-[10px] text-gray-400 leading-tight">Audio SOS para la ansiedad en 3 min.</p>
                     </div>
                 </div>
+
                 <div class="bg-[#150a25] rounded-xl p-3 border border-purple-900/50 flex items-center gap-3 shadow-lg">
-                    <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-orange-400">
-                        <i data-lucide="users" class="w-5 h-5"></i>
+                    <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-orange-400 border border-white/5">
+                        <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
                     <div>
                         <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">BONO #4</div>
-                        <h3 class="text-sm font-bold text-white leading-tight">Tribu 'Indomables'</h3>
-                        <p class="text-[10px] text-gray-400">Acceso a la comunidad VIP.</p>
+                        <h3 class="text-sm font-bold text-white leading-tight mb-0.5">Tribu 'Indomables'</h3>
+                        <p class="text-[10px] text-gray-400 leading-tight">Acceso a la comunidad VIP de apoyo.</p>
                     </div>
                 </div>
+
+                <div class="bg-[#150a25] rounded-xl p-3 border border-purple-900/50 flex items-center gap-3 shadow-lg">
+                    <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-green-400 border border-white/5">
+                        <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">BONO #5</div>
+                        <h3 class="text-sm font-bold text-white leading-tight mb-0.5">Actualizaciones</h3>
+                        <p class="text-[10px] text-gray-400 leading-tight">Todo el material nuevo sin pagar más.</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#150a25] rounded-xl p-3 border border-purple-900/50 flex items-center gap-3 shadow-lg">
+                    <div class="w-12 h-12 rounded-full bg-purple-900/30 flex items-center justify-center flex-shrink-0 text-blue-400 border border-white/5">
+                        <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <div class="text-[9px] font-bold text-gray-500 uppercase tracking-widest">BONO #6</div>
+                        <h3 class="text-sm font-bold text-white leading-tight mb-0.5">Soporte Prioritario</h3>
+                        <p class="text-[10px] text-gray-400 leading-tight">No estarás sola. Respuesta rápida.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -287,6 +323,33 @@
                 <div class="absolute -left-[31px] top-0 w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center text-xs font-bold shadow-[0_0_10px_teal]">3</div>
                 <h3 class="text-white font-bold text-sm">Libérate</h3>
                 <p class="text-gray-400 text-xs">En 7 días recuperas tu paz mental.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 bg-[#0a0312] border-y border-purple-900/30 overflow-hidden relative">
+        <div class="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#0a0312] to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#0a0312] to-transparent z-10"></div>
+        <div class="flex w-max gap-4 animate-scroll" id="ticker-track">
+            </div>
+    </section>
+
+    <section id="garantia" class="py-10 px-5">
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-yellow-900/20 to-black border border-yellow-600/50 rounded-2xl p-6 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+            <div class="relative z-10">
+                <div class="w-12 h-12 bg-yellow-500/10 rounded-full flex items-center justify-center border border-yellow-500/50 mx-auto mb-3 shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                    <i data-lucide="shield-check" class="w-6 h-6 text-yellow-400"></i>
+                </div>
+                <h2 class="text-xl font-heading italic text-yellow-400 mb-2">
+                    Garantía de "Alivio o Reembolso"
+                </h2>
+                <p class="text-gray-200 font-sans text-sm mb-4 max-w-xl mx-auto leading-relaxed">
+                    Prueba el Audio de Anestesia hoy. Si no sientes un peso levantarse de tu pecho en 24h, te devuelvo todo. <span class="text-white font-bold">Sin preguntas.</span>
+                </p>
+                <div class="inline-block bg-yellow-500/10 border border-yellow-500/30 text-yellow-200 px-4 py-1.5 rounded-full font-bold font-sans text-[10px] tracking-widest uppercase">
+                    RIESGO CERO
+                </div>
             </div>
         </div>
     </section>
@@ -334,34 +397,77 @@
         </div>
     </section>
 
-    <section class="py-8 px-4 border-t border-white/5 mb-10">
-        <h2 class="text-xl font-heading text-center mb-4">Dudas Frecuentes</h2>
-        <div class="space-y-2 max-w-2xl mx-auto">
+    <section id="faq" class="py-12 px-5 max-w-3xl mx-auto border-b border-purple-900/30">
+        <h2 class="text-2xl md:text-3xl font-heading text-center mb-6">Preguntas Frecuentes</h2>
+        <div class="space-y-3" id="faq-container">
+            
             <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
-                <button class="faq-btn w-full px-4 py-3 text-left flex justify-between items-center text-sm font-medium text-gray-200">
-                    ¿Qué pasa si él me escribe?
-                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                    ¿Qué pasa si él intenta contactarme de nuevo?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
                 </button>
-                <div class="faq-content px-4 text-xs text-gray-400">
-                    <div class="pb-3">Usarás los scripts del Bono #1 para responder sin engancharte emocionalmente.</div>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">Es muy probable que lo haga (Hoovering). Por eso el Bono #1 incluye los "Scripts de Piedra Gris". Sabrás exactamente qué responder (o no responder) para que él pierda interés sin que tú pierdas la paz.</div>
                 </div>
             </div>
+
             <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
-                <button class="faq-btn w-full px-4 py-3 text-left flex justify-between items-center text-sm font-medium text-gray-200">
-                    ¿Sirve si terminamos hace mucho?
-                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                    He visto mil videos en YouTube, ¿en qué es diferente esto?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
                 </button>
-                <div class="faq-content px-4 text-xs text-gray-400">
-                    <div class="pb-3">Sí. El detox limpia la adicción química que persiste años después de la ruptura.</div>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">YouTube te da información pasiva (teoría). Este protocolo es un sistema activo de desintoxicación química. No solo te explicamos qué pasa, te damos las herramientas (audios binaurales y ejercicios) para calmar tu sistema nervioso físicamente. Es la diferencia entre leer sobre una dieta y hacerla.</div>
                 </div>
             </div>
+            
+            <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                    ¿Y si no estoy segura de que él sea Narcisista?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
+                </button>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">No necesitas un diagnóstico clínico de él para sanarte tú. Si sientes ansiedad, obsesión, insomnio y una necesidad física de contactarlo aunque te haga daño, tienes una <strong>Vinculación Traumática</strong>. Este protocolo trata TUS síntomas y TU adicción, independientemente de la etiqueta que él tenga.</div>
+                </div>
+            </div>
+
+            <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                    Estoy muy agotada mentalmente, ¿es difícil de seguir?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
+                </button>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">El programa está diseñado específicamente para mujeres con "niebla mental". No son libros eternos. Son pasos cortos, directos y audios que hacen el trabajo por ti. Solo necesitas 15 minutos al día o ponerte los audífonos antes de dormir.</div>
+                </div>
+            </div>
+
+            <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                    ¿Cómo recibo el acceso? ¿Es inmediato?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
+                </button>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">Sí. Inmediatamente después de tu pago de $6.99, recibirás un correo electrónico con tu acceso a la plataforma privada. Puedes descargar el manual y escuchar los audios desde tu celular, tablet o computadora al instante.</div>
+                </div>
+            </div>
+
+            <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                    ¿Es seguro pagar? ¿Aparecerá el nombre del producto?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
+                </button>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">Usamos Hotmart, la plataforma educativa más segura del mundo con encriptación bancaria. En tu estado de cuenta bancario aparecerá un cargo genérico como "HOTMART", garantizando tu privacidad y discreción total.</div>
+                </div>
+            </div>
+
              <div class="bg-[#1e1035] rounded-lg border border-purple-900 overflow-hidden">
-                <button class="faq-btn w-full px-4 py-3 text-left flex justify-between items-center text-sm font-medium text-gray-200">
-                   Garantía de Devolución
-                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                <button class="faq-btn w-full px-5 py-4 text-left flex justify-between items-center font-medium text-gray-200 hover:bg-white/5 transition-colors text-sm">
+                   ¿Qué pasa si lo compro y no me funciona?
+                    <i data-lucide="chevron-down" class="w-4 h-4 transition-transform text-purple-400"></i>
                 </button>
-                <div class="faq-content px-4 text-xs text-gray-400">
-                    <div class="pb-3">Si en 30 días no sientes paz, te devuelvo el dinero. Sin preguntas.</div>
+                <div class="faq-content px-5 text-xs md:text-sm text-gray-400">
+                    <div class="pb-4 pt-1">Tienes 30 días de Garantía de Hierro. Entra, prueba el Audio de Anestesia y lee el manual. Si no sientes un alivio real, te devolvemos el 100% de tu dinero. Solo tienes que enviar un correo. Sin preguntas incómodas.</div>
                 </div>
             </div>
         </div>
@@ -378,7 +484,7 @@
             <span class="font-bold text-white text-lg leading-none text-green-400">$6.99</span>
         </div>
         <a href="#oferta" class="bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold px-6 py-3 rounded-full shadow-lg text-xs tracking-wide uppercase animate-pulse">
-            QUIERO MI ALIVIO AHORA
+            QUIERO MI ALIVIO
         </a>
     </div>
 
@@ -399,7 +505,7 @@
         track.innerHTML = loopTestimonials.map(t => `
             <div class="flex-shrink-0 w-[260px] bg-[#24123d] p-4 rounded-xl border border-purple-800/50 shadow-lg">
                 <div class="flex text-yellow-400 mb-2 h-3 w-3 gap-1">⭐⭐⭐⭐⭐</div>
-                <p class="text-gray-200 text-xs italic mb-3">"${t.text}"</p>
+                <p class="text-gray-200 text-xs italic mb-3 line-clamp-3">"${t.text}"</p>
                 <div class="flex items-center gap-2">
                     <div class="w-6 h-6 rounded-full ${t.bg} flex items-center justify-center text-[10px] font-bold">${t.name[0]}</div>
                     <div class="text-[10px] text-gray-400">${t.name} - ${t.loc}</div>
@@ -407,6 +513,26 @@
             </div>
         `).join('');
         
+        // Ticker Generado
+        const tickerTrack = document.getElementById('ticker-track');
+        const tickerData = [
+            { user: "@ana_libre", text: "Literalmente me salvó la vida mental.", color: "from-pink-500 to-purple-600", initial: "A" },
+            { user: "@mari_paz", text: "La guía de scripts es ORO puro. 🔥", color: "from-purple-500 to-indigo-600", initial: "M" },
+            { user: "@sol_renace", text: "Dormí 8 horas seguidas. 💪", color: "from-indigo-500 to-blue-600", initial: "S" },
+            { user: "@carla_v", text: "No creía en esto pero funciona. 📈", color: "from-blue-500 to-cyan-600", initial: "C" },
+            { user: "@soy_valiente", text: "Mejor inversión de mi vida. 💸", color: "from-green-500 to-emerald-600", initial: "V" }
+        ];
+        const loopTicker = [...tickerData, ...tickerData];
+        tickerTrack.innerHTML = loopTicker.map(t => `
+            <div class="bg-white/5 backdrop-blur-sm border border-white/10 px-4 py-2 rounded-full flex items-center gap-2 min-w-[200px]">
+                <div class="w-5 h-5 rounded-full bg-gradient-to-br ${t.color} flex items-center justify-center text-[9px] font-bold">${t.initial}</div>
+                <div>
+                    <div class="text-[9px] text-gray-400 font-bold">${t.user}</div>
+                    <div class="text-[10px] text-gray-200 leading-tight">"${t.text}"</div>
+                </div>
+            </div>
+        `).join('');
+
         // FAQ Toggle
         document.querySelectorAll('.faq-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -438,22 +564,30 @@
             }
         });
 
-        // Video Logic (Tu código VSL anterior)
+        // Video Logic (Tu código VSL 2:20 con barra morada)
         const video = document.getElementById('miVideoVSL');
         const capa = document.getElementById('capaUnmute');
         const barra = document.getElementById('barraProgreso');
+        let videoStarted = false;
         
         capa.addEventListener('click', () => {
+            videoStarted = true;
             video.currentTime = 0; video.muted = false; video.play();
             capa.style.display = 'none';
+            // 140 segundos = 2:20 minutos
             barra.style.animation = 'smart-progress-purple 140s linear forwards';
         });
         
         video.addEventListener('click', () => {
-            if(capa.style.display === 'none') {
+            if(videoStarted) {
                 if(video.paused) { video.play(); barra.style.animationPlayState = 'running'; }
                 else { video.pause(); barra.style.animationPlayState = 'paused'; }
             }
+        });
+        
+        video.addEventListener('ended', () => {
+            barra.style.animation = 'none';
+            barra.style.width = '100%';
         });
     </script>
 </body>
